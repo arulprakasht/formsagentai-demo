@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FormsAgent AI</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>🧠 Workflow Context</h2>
+        <ul id="workflow-history"></ul>
+        <h2>💡 Suggested Prompts</h2>
+        <ul id="suggested-prompts"></ul>
+    </div>
+    <div class="main">
+        <header>
+            <img src="/static/img/logo.png" alt="FormsAgent AI Logo" class="logo">
+            <h1>FormsAgent AI</h1>
+            <p class="tagline">Your Unified Enterprise Assistant for Jira, ServiceNow, Confluence & Forms</p>
+        </header>
+        <div class="chat-container" id="chat-container"></div>
+        <form id="chat-form">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off" required>
+            <button type="submit">Send</button>
+        </form>
+        <div class="quick-actions">
+            <button onclick="sendQuick('Create Jira Bug')">🐞 Create Jira Bug</button>
+            <button onclick="sendQuick('Report Incident')">🚨 Report Incident</button>
+            <button onclick="sendQuick('Search Knowledge Base')">📚 Search Knowledge</button>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
